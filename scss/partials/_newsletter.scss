@@ -1,0 +1,97 @@
+.newsletter
+{
+	padding:20px 30px;
+
+	&.clearfix form h3 
+	{
+	  letter-spacing: 1.5px;
+	  margin-top: 10px;
+	  font-size:28px;
+	  font-weight:300;
+	  letter-spacing:0px;
+	  display:inline;
+	  text-transform:none;
+	}
+
+	& div.inputs 
+	{
+		display:inline-block;
+		width:50%;
+	}
+
+	& div.text {
+	  color: #333333;
+	  display:inline-block;
+	  width:49%;
+	  text-align: left;
+	 }
+
+	& div.text div{
+	  margin:0px 0px;
+	}
+
+	& label
+	{
+		font-size: 20px;
+		font-weight:300;
+		line-height: 40px;
+	}
+
+	& input
+	{
+		font-size:12px;
+		padding:12px 15px 11px;
+		margin-bottom: 0px;
+		border:none;
+		vertical-align:top;
+		background:#333;
+		color:#fff;
+		box-shadow:0 0 1px 0 #555555 inset;
+		width:20%;
+		min-width:100px;
+	}
+
+	& input.email
+	{
+		font-size:13px;
+		border: none;
+		width:70%;
+		padding:10px 15px;
+		margin-right:5px;
+		background:#fafafa;
+		color:#333;
+		vertical-align:middle;
+		margin-bottom:0px;
+	}
+
+	& div
+	{
+		text-align:left;
+		vertical-align:middle;
+	}
+
+	& div p
+	{
+		color:#333;
+	}
+
+	.modal-dialog & form > div h3
+	{
+		text-transform:none;
+		color:#333;
+		font-size:32px;
+	}
+
+	.modal-dialog & form > div
+	{
+		width:100%;
+	}
+
+	.modal-dialog & form > div > div
+	{
+		float:none;
+		clear:both;
+		font-size:14px;
+		padding-top:20px;
+	}
+}

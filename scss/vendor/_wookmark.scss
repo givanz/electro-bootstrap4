@@ -1,0 +1,255 @@
+
+
+
+
+
+/**
+ * Progress bar for imagesLoaded
+ */
+.progress-bar {
+  background-color: #0BC20B;
+  height: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  -webkit-box-shadow: 0 1px 3px rgba(11, 194, 11, 0.2);
+     -moz-box-shadow: 0 1px 3px rgba(11, 194, 11, 0.2);
+          box-shadow: 0 1px 3px rgba(11, 194, 11, 0.2);
+  -webkit-transition: width 0.1s ease-out;
+     -moz-transition: width 0.1s ease-out;
+       -o-transition: width 0.1s ease-out;
+          transition: width 0.1s ease-out;
+}
+
+/**
+ * Placerholder css
+ */
+.wookmark-placeholder {
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
+  background-color: #eee;
+  border: 1px solid #dedede;
+  z-index: -1;
+}
+
+/**
+ * Grid container
+ */
+.themes {
+  position: relative; /** Needed to ensure items are laid out relative to this container **/
+  margin: 0px 0;
+  padding: 0;
+  list-style-type: none;
+  display: none;
+}
+
+
+/**
+ * Grid items
+ */
+.themes .theme {
+  display: block;
+  opacity: 1;
+  text-align: center;
+  list-style-type: none;
+  background-color: #fff;
+  float: left;
+  cursor: pointer;
+  padding: 0px;
+  width:auto;
+
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+}
+
+.themes .theme.wookmark-inactive {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.themes .theme:hover {
+  background-color: #fafafa;
+}
+
+.themes img {
+  display: block;
+  max-width:100%;
+}
+/*
+.themes a {
+  color: #555;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  font-size: 2em;
+  font-weight: bold;
+  text-decoration: none;
+}
+*/
+.tile-loading:after {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #ddd;
+  content: "Loading\2026";
+  padding-top: 20px;
+  color: #999;
+}
+
+/**
+ * Filters
+ */
+#filters {
+  list-style-type: none;
+  text-align: center;
+  margin: 0 5% 0 5%;
+}
+
+#filters:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+#filters li {
+  font-size: 12px;
+  display:inline-block;
+  padding: 6px 8px 4px;
+  cursor: pointer;
+  margin: 0 5px;
+  -webkit-transition: all 0.15s ease-out;
+     -moz-transition: all 0.15s ease-out;
+       -o-transition: all 0.15s ease-out;
+          transition: all 0.15s ease-out;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+}
+
+#filters li:hover {
+  background: #4281f5;
+  color: #ffffff;
+}
+
+#filters li.active {
+  background: #4281f5;
+  color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			.theme{margin:0px;}
+			.theme > div{ position: relative; background: #fff;  overflow: hidden; cursor: default; transition: all .3s ease; -webkit-transition: all .3s ease;box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.26);-webkit-box-shadow: 0 0px 2px  rgba(0, 0, 0, 0.26);}
+    		/*
+    		@media all and (min-width: 1580px){
+    			.theme{ padding: 40px 80px; }
+    		}
+    		
+    		@media all and (max-width: 1366px){
+    			.theme{ padding: 40px 40px; }
+    		}
+    		@media all and (max-width: 1220px){
+    			.theme{ padding: 40px 32px; }
+    		}
+    		@media all and (max-width: 1088px){
+    			.col-md-6{ width: 100%; }
+    			.theme{ padding: 0px 64px 0 64px; }
+    		}*/
+    		.theme > div:hover{ background: #fefefe; }
+    		/*.theme img{ box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);}*/
+			 .theme:hover .desc {
+				opacity: 1;
+				bottom:0px;
+			}
+			.desc {
+				background: rgba(255, 255, 255, 0.8) none repeat scroll 0 0;
+				bottom: 0px;
+				height:100%;
+				opacity: 0;
+				padding: 20px;
+				position: absolute;
+				transition: all 0.3s ease 0s;
+				width: 100%;
+			}
+    		
+    		@media all and (max-width: 767px){
+    			.theme{ height: auto; padding: 24px; }
+    			.theme img{ width: 100%; margin-right: 0; top: 0; transform: translateY(0); -webkit-transform: translateY(0); margin-bottom: 24px; }
+    			.desc{ width: 100%; text-align: center; }
+    			.desc{ top: 0; transform: translateY(0); -webkit-transform: translateY(0);  }
+    		}
+    		
+    		.desc > div {display:table;width:100%;height:100%}
+    		.desc > div > div {display:table-cell;width:100%;height:100%;vertical-align:middle;}
+    		.desc h3{ margin-bottom: 0px;margin-top: 0px; font-size:20px;font-weight:400;line-height:20px;}
+    		.desc h4{ margin-bottom: 0px; margin-top: 10px;font-size:14px;font-weight:400;font-family:Lato;color:#777;line-height:20px;}
+    		.desc p{ display:none;margin-bottom: 24px; }
+    		.desc a.details {font-size:13px; font-weight:600;margin-top:10px; color:#5da0ff;}
+    		.theme .buttons-holder {margin-top:20px;}
+    		.theme .buttons-holder .btn-default {display:none}
+    		.theme .text-link{ font-weight: bold; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-right: -1px; display: inline-block; padding: 4px 16px; border-radius: 3px; color: #222; border: 2px solid #222; transition: all .3s ease; -webkit-transition: all .3s ease; transform: scale(1); -webkit-transform: scale(1); -webkit-backface-visibility: hidden; }
+    		.theme .text-link:hover{ background: #222; color: #fff; }
+    		.text-link:nth-of-type(1){ margin-right: 16px; }
+    		.demos{ padding: 30px 0px 30px; }
+    		.demos .col-md-6{ padding: 0 !important; }
+    		/*.background-image-holder:before{ position: absolute; content: ''; width: 100%; height: 100%; top: 0; left: 0; background: #000; opacity: .4; }*/
+    		.v-logo{ max-width: 200px; display: inline-block; margin-bottom: 16px; }
+    		.fixed-header h4{ position: relative; margin-bottom: 32px; }
+    		.fixed-header .row{ position: relative; z-index: 2; }
+    		.btn-white{ color: #fff; margin-left: 16px; }
+    		.instructions{ padding:50px 0 0px; background:#fff}
+    		.instructions h4{ margin: 0; font-size:27px;}
+    		.cache{ height: 0; width: 0; opacity: 0; overflow: hidden; display: none; }
+    		
+    		body#theme h1 
+    		{
+				font-size:32px;
+				line-height:32px;
+				margin-bottom:0px;
+    		}
+
+    		body#theme h3
+    		{
+				font-size:14px;
+				line-height:20px;
+				font-weight:400;
+				margin-bottom:0px;
+				margin-top:15px;
+				
+    		}
+
+    		body#theme p
+    		{
+				font-size:13px;
+				color:#777;
+				margin-top:30px;
+    		}
+
+    		body#theme .img
+    		{
+				box-shadow: 0 0px 2px 0 rgba(0, 0, 0, 0.26);-webkit-box-shadow: 0 0px 2px  rgba(0, 0, 0, 0.26);
+			}

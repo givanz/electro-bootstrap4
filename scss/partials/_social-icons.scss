@@ -1,0 +1,23 @@
+.social-icons
+{
+	ul {
+		list-style:none;
+		padding:0px;
+		margin:0px;
+	
+		li {
+			display:inline-block;
+			padding:0.3rem;
+			
+			a {
+				opacity:0.7;
+				
+				&:hover	{
+				opacity:1;
+				
+				}
+			}
+			
+		}
+	}
+}	

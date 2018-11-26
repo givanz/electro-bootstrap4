@@ -1,0 +1,168 @@
+$grid-subtitle-color:  #333 !default;
+$grid-title-color:  #333 !default;
+$grid-link-color:  #333 !default;
+
+$grid-subtitle-font-family:  $font-family-sans-serif !default;
+$grid-title-font-family:  $font-family-sans-serif !default;
+$grid-link-font-family:  $font-family-sans-serif !default;
+
+$grid-subtitle-font-size:  10px !default;
+$grid-title-font-size:  16px !default;
+$grid-title-font-weight:  600 !default;
+$grid-title-text-transform: uppercase !default;
+
+
+$grid-link-font-size: 12px !default;
+$grid-link-font-family:  $font-family-sans-serif !default;
+$grid-link-letter-spacing: 0px !default;
+
+
+.grid_list
+{
+    display:inline-block;
+    background:#fff;
+    display:block;
+
+	div.grid_item
+	{
+		cursor:pointer;
+		/*
+		&:hover .background
+		{
+			opacity:0.85;
+		}*/
+
+		& > div
+		{
+			width: inherit;
+			width:100%;
+			height:100%;
+			vertical-align:middle;
+			text-align:center;
+			position: absolute;
+			z-index:1;
+		}
+
+		& div.background
+		{
+			background-repeat:no-repeat;
+			background-size:cover;
+			background-clip: content-box;
+			background-position: center center;
+			opacity:1;
+			width:100%;
+			height:100%;
+			z-index:0;
+			position:absolute;
+			top:0px;
+			display: block;
+			opacity:1;
+		}
+
+		&:hover > div.background
+		{
+			filter:none;
+			-webkit-filter:none;
+			/*opacity:0.7;*/
+		}
+
+
+		& > div > div 
+		{
+		  display: table;
+		  height: 100%;
+		  vertical-align: bottom;
+		  /*width: 100%;*/
+		  width: inherit;
+
+			& > div
+			{
+				display: table-row;
+				vertical-align: middle;
+				margin:5px;
+
+
+				& > .grid_text
+				{
+					z-index:5;
+					position: relative;
+					display:table-cell;
+					vertical-align:middle;
+
+					& > div
+					{
+						display:inline-block;
+						text-align:left;
+					}
+
+					& h3
+					{
+						color: $grid-subtitle-color;
+						font-size: $grid-subtitle-font-size;
+						margin:0px;
+						padding:2px 5px;
+						text-align:left;
+						display: inline-block;
+						margin-bottom:0px;
+						background:transparent;
+						margin-bottom:5px;
+						font-family:$grid-subtitle-font-family;
+						font-weight:600;
+						letter-spacing:1px;
+						/*background-color:rgba(0, 0, 0, 0.3);*/
+						border-radius: 2px;
+						text-transform: capitalize;
+					}
+
+					& h2
+					{
+						color:$grid-title-color;
+						font-size: $grid-title-font-size;
+						font-family:$grid-title-font-family;
+						text-align:center;
+						line-height: 16px;
+						margin:0px auto;
+						padding:0px 0px;
+						width:inherit;
+						word-wrap: break-word;
+
+						display:block;
+						margin:0px;
+						font-weight:$grid-title-font-weight;
+						letter-spacing: 0px;
+						line-height: 24px;
+						width: auto;
+						text-transform:$grid-title-text-transform;
+						background:transparent;
+						padding:0rem 0rem 1.5rem;
+						margin-bottom:2rem;
+					
+						background-image: url(/image/catalog/element9.png);
+						background-position: center bottom 0px;
+						background-repeat: no-repeat;
+						/*background-size: 70px;*/
+					}
+					
+					& p
+					{
+						font-size:12px;
+					}
+
+					& a
+					{
+						/*border:2px solid #fff;*/
+						padding:1px 5px;
+						display:inline-block;
+						margin:10px 0px 10px;
+						font-size:$grid-link-font-size;
+						font-family:$grid-link-font-family;
+						letter-spacing:$grid-link-letter-spacing;
+						color:$grid-link-color;
+						padding:2px 0px;
+						background:transparent;
+					}
+				}
+			}
+		}
+	}
+}

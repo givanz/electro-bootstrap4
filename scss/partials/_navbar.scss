@@ -1,0 +1,107 @@
+// Vertical stacked navbar
+@mixin navbar-vertical($direction:right)
+{
+  .navbar-nav {
+    .nav-item {
+      display:block;
+      float:none;
+    }
+
+	  .nav-item + .nav-item {
+		margin-left: 0px;
+	  }
+  }
+}
+
+
+@include media-breakpoint-up(md) {
+	.navbar-top,
+	.navbar-bottom {
+	  position: absolute;
+	  z-index: $zindex-navbar-fixed;
+	}
+
+	.navbar-top {
+	  top: 0;
+	}
+
+	.navbar-bottom {
+	  bottom: 0;
+	}
+}
+
+@mixin navbar-offcanvas($direction:right) {
+	&
+	{
+		padding:0px;
+	
+		 .navbar-nav
+		{
+			height:100%;
+			position:fixed;
+			overflow: auto;
+			min-width:320px;
+			background:#000;
+			background:rgba(0,0,0,0.9);
+			top:0px;
+			#{$direction}:0px;
+			transition:opacity 0.7s;
+			z-index:2;
+		}
+		
+		.navbar-nav.collapse, .navbar-nav.collapsing
+		{
+			opacity:0;
+			height:100% !important;
+		}
+
+		.navbar-nav.collapse.in
+		{
+			opacity:1;
+			height:100%;
+			z-index:100;
+		}
+		
+		.navbar-toggler
+		{
+			transition:opacity .7s;
+			outline:none;
+			opacity:1;
+		}
+
+		.navbar-toggler
+		{
+			transition:opacity .7s;
+			outline:none;
+			opacity:1;
+			padding:0px;
+			z-index:101;
+		}
+
+		.navbar-toggler.collapsed
+		{
+			//@extend .ion-navicon
+			@extend .ion-android-menu;
+			font-size:2rem;
+		}
+		
+		.navbar-toggler.collapsing
+		{
+			opacity:0;
+			padding:0px;
+			//transition:opacity 1s;
+		}
+		
+		//.navbar-toggler:not(.collapsed)
+		.navbar-toggler.collapsed.in
+		{
+			@extend .ion-android-close;
+			float:$direction;
+			position:fixed;
+			top:0px;
+			#{$direction}:0px;
+			margin:2rem;
+			font-size:1.7rem;
+		}
+	}
+}

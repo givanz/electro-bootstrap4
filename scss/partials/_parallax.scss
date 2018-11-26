@@ -1,0 +1,181 @@
+$parallax-title-font-family:  $font-family-sans-serif !default;
+$parallax-paragraph-font-family:  $font-family-sans-serif !default;
+
+$parallax-title-font-size:42px !default;
+$parallax-paragraph-font-size:18px !default;
+
+$parallax-title-color:#fff !default;
+$parallax-paragraph-color:#fff !default;
+
+$parallax-title-margin:30px 0px 50px !default;
+$parallax-paragraph-margin:40px auto 30px !default;
+
+@mixin parallax($image) {
+	& {
+	  background-image:url($image);
+	  background-attachment: fixed;
+	  background-size: cover;
+	  background-position: center;
+	}
+}
+
+@mixin overlay($image) {
+	& {
+	  background-image:url($image);
+	  background-attachment: fixed;
+	  background-size: cover;
+	}
+}
+
+/* parallax */
+
+section.module:last-child {
+  margin-bottom: 0;
+}
+
+section.module h4 {
+  margin-bottom: 40px;
+  font-family: Open Sans,"Montserrat", serif;
+  font-size: 30px;
+  font-weight:600;
+}/*
+section.module p {
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: 300;
+}*/
+section.module p:last-child {
+  margin-bottom: 0;
+}
+section.module.content {
+  padding: 40px 0;
+}
+section.module.parallax {
+	font-size: 16px;
+	text-align: center;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+section.module.parallax > div
+{
+	padding: 30px 0;
+}
+
+section.module.parallax .container
+{
+	position:relative;
+	z-index:10;
+}
+  
+.page-container section.module.parallax {
+  margin:30px 0px;
+}
+
+section.module.parallax .flex-direction-nav .flex-next {
+  right: -30px;
+}
+
+section.module.parallax .flex-direction-nav .flex-prev {
+  left: -30px;
+}
+
+section.module.parallax .flex-direction-nav a {
+  background: transparent;
+  color: #fff;
+  font-size: 42px;
+  line-height: 28px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: auto;
+  top: 40%;
+}
+
+section.module.parallax .product .btn-primary
+{
+	display:none;
+}
+
+section.parallax h3 {
+	color: $parallax-title-color;
+	font-size: $parallax-title-font-size;
+	font-weight: 300;
+	font-family:$parallax-title-font-family;
+	text-align: center;
+	margin:$parallax-title-margin;
+
+	background-image: url(../img/element4.png);
+	background-position: center bottom -0px;
+	background-repeat: no-repeat;  
+	padding-bottom: 3rem;
+	margin-bottom: 1rem;	
+}
+
+section.parallax .product .price, section.parallax .product .name a
+{
+	color:#333;
+}
+
+section.parallax.white .product .price, section.parallax.white .product .name a
+{
+	color:#fff;
+}
+
+section.parallax div > .container > p 
+{
+  font-family: $parallax-paragraph-font-family;
+  font-size: $parallax-paragraph-font-size;
+  line-height: 32px;
+  margin:$parallax-paragraph-margin;
+  width: 50%;
+  color:$parallax-paragraph-color;
+}
+
+section.parallax div > .container >  .btn 
+{
+  background: #333;
+  color: #ffffff;
+  font-family: Lato, "Open Sans";
+  font-weight:600;
+  font-size: 13px;
+  padding: 12px 40px;
+  border:none;
+  margin:10px 0px 30px;
+}
+
+/*
+section.parallax.white, section.parallax.white h3
+{
+	color:#fff;
+}*/
+
+section.parallax.white div > .container >  .btn
+{
+	color:#333;
+	background:#fff;
+}
+
+/*
+@media all and (min-width: 600px) {
+  section.module h2 {
+    font-size: 42px;
+  }
+  section.module p {
+    font-size: 20px;
+  }
+  section.module.parallax h3 {
+    font-size: 42px;
+  }
+}
+@media all and (min-width: 960px) {
+  section.module.parallax h1 {
+    font-size: 42px;
+  }
+}
+*/

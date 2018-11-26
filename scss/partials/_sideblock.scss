@@ -1,0 +1,123 @@
+/*-----------------------------------------------------------------------------------*/
+/*	Side block module
+/*-----------------------------------------------------------------------------------*/
+
+.screen_right
+{
+	position:fixed;
+	right:0px;
+	top:0px;
+	height:100%;
+	width:35px;
+	z-index:10;
+}
+.screen_right > div
+{
+	display:table;
+	height:100%;
+}
+
+.screen_right > div > div
+{
+	display:table-row;
+	height:100%;
+}
+
+
+.screen_right > div > div > div
+{
+	display:table-cell;
+	vertical-align:middle;
+}
+
+.screen_right div .sideblock
+{
+	margin-bottom:5px;
+	position:relative;
+	clear:both;
+	transition: all 0.5s ease-in-out;
+	z-index:1;
+	right:0px;
+}
+
+.screen_right div .sideblock:hover, .screen_right div .sideblock.hover
+{
+	right:300px !important;
+	z-index:1000;
+	transition: all 0.5s ease-in-out;
+}
+
+.screen_right div .sideblock .head
+{
+	padding:5px;
+	text-align:center;
+	margin-bottom:5px;
+}
+
+.screen_right div .sideblock .head .title
+{
+	padding:10px 0px;
+}
+
+.screen_right div .sideblock .head .icon
+{
+	font-size:20px;
+	text-align:center;
+	line-height:26px;
+	height:30px;
+}
+
+.screen_right div .sideblock .body
+{
+	float:right;
+	background:#fff;
+	min-height:100px;
+	position:absolute;
+}
+
+.screen_right div .sideblock .body > p
+{
+	padding:5px;
+}
+
+
+
+html[dir=rtl] .screen_right 
+{
+	position: fixed;
+	right: auto;
+	left: 0px;
+	top: 0px;
+	height: 100%;
+	width: 40px;
+}
+
+html[dir=rtl] .screen_right div .sideblock
+{
+	margin-bottom:10px;
+	position:relative;
+	clear:both;
+	transition: all 0.5s ease-in-out;
+	z-index:1;
+	left:0px;
+	right:auto;
+	left:-300px;
+}
+
+html[dir=rtl] .screen_right div .sideblock:hover
+{
+	right:auto !important;
+	left:0px !important;
+	z-index:1000;
+	transition: all 0.5s ease-in-out;
+}
+
+html[dir=rtl] .screen_right div .sideblock .body
+{
+	left:0px !important;
+}
+
+html[dir=rtl] .screen_right div .sideblock .head
+{
+	float:right;
+}

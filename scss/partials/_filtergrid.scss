@@ -1,0 +1,65 @@
+
+/**
+ * Grid items animation
+ */
+.grid > div {
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+}
+
+.wookmark-placeholder {
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+}
+
+
+
+
+/**
+ * Grid container
+ */
+.grid {
+  position: relative; /** Needed to ensure items are laid out relative to this container **/
+  clear:both;
+  padding:0rem 0rem;
+  overflow:hidden;
+}
+
+/**
+ * Grid items
+ */
+
+.grid > div
+{
+ /* display: none;*/
+}
+
+.grid .prod
+{
+	padding:0px;
+}
+
+.grid > div.inactive {
+  visibility: hidden;
+  width:100px;
+  height:100px;
+  opacity: 0;
+}
+
+
+/**
+ * Placerholder css
+ */
+.wookmark-placeholder {
+          border-radius: 2px;
+     -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  background-color: #eee;
+  border: 1px solid #dedede;
+  z-index: -1;
+}
+

@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+$enable-rounded:false;
+
+//fonts
+$font-family-sans-serif: Raleway,"Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif:      Georgia, "Times New Roman", Times, serif !default;
+$font-bold: Montserrat, "Arial Black", Arial !default;
+//colors
+$brand-primary:             #121212 !default;
+
+@import 'bourbon/bourbon';
+@import 'bootstrap/bootstrap';
+@import 'partials/base';
+@import 'partials/masonry';
+@import 'partials/parallax';
+@import 'partials/navbar';
+@import 'vendor/ionicons';
+@import 'vendor/fontawesome/fontawesome';
+
+
+.vertical-align {
+    position: relative;
+    top: 50%;
+    @include transform(translateY(-50%));
+}
+
+
+.overlay-black
+{
+	background:rgba(0,0,0,0.5);
+	height: 100%;
+    width: 100%;
+}
+
+.form-control {
+  box-shadow: 0 0 1px 1px #eee inset;
+  @include box-shadow(0 0 1px 1px #eee inset);
+  padding: 0.5rem 0.75rem;
+}
